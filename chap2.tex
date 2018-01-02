@@ -78,98 +78,132 @@ This means that electromagnetic waves travel through vacuum with the speed of li
 
 
 \subsection{Poynting Vector}
-The Poynting vector $\vec{S}$ represents the directional energy flux i.e, the energy transfer per unit area per unit time of an electromagnetic field.\\
-\begin{equation}
-\vec{S} = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
-\end{equation}
-Which shows that the direction of power flow (propagation of EMW) at any point is normal to both $\vec{E}$ and $\vec{B}$.\\
-This implies that EMW/light is an Transverse wave.\\
-The SI unit of the Poynting vector is the watt per square meter, $W/m^{-2}$.
 
-\subsection{Wave Solution In Spherical Coordinates}
+The Poynting vector $\vec{S}$ represents the directional energy flux i.e, the energy transfer per unit area per unit time of an electromagnetic field.
+%
+   \begin{equation}
+   \vec{S} = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
+   \end{equation}
+%
+which shows that the direction of power flow (propagation of EMW) at any point is normal to both $\vec{E}$ and $\vec{B}$. This implies that EMW/light is a Transverse wave. The SI unit of the Poynting vector is the watt per square meter, $W/m^{-2}$.
 
-\subsubsection{Spherical Coordinate System}
-Vector derivatives in spherical coordinates are as:\\
-Gradient\\
-\begin{equation}
-\vec{\nabla} A = \frac{\partial A}{\partial r}\hat{r}+\frac{1}{r}\frac{\partial A}{\partial \theta}\hat{\theta}+\frac{1}{r\sin\theta}\frac{\partial A}{\partial \phi}\hat{\phi}
-\end{equation}
-Divergence\\
-\begin{equation}
-\vec{\nabla}.\vec{A} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2A_r)+\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta A_\theta)+\frac{1}{r\sin\theta}\frac{\partial A_\phi}{\partial\phi}
-\end{equation}
-Curl\\
-\begin{equation}
-\vec{\nabla}\times\vec{A} = \frac{1}{r\sin\theta}[\frac{\partial}{\partial\theta}(\sin\theta A_\phi)-\frac{\partial A_\theta}{\partial\phi}]\hat{r}+\frac{1}{r}[\frac{1}{\sin\theta}\frac{\partial A_r}{\partial\phi}-\frac{\partial}{\partial r}(rA_\phi)]\hat{\theta}+\frac{1}{r}[\frac{\partial}{\partial r}(rA_\theta)-\frac{\partial A_r}{\partial \theta}]\hat{\phi}
-\end{equation}
-Laplacian\\
-\begin{equation}
-\nabla^2 \vec{A} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{A}}{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial\vec{A}}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{A}}{\partial \phi^2}
-\end{equation}
 
-\subsubsection{Wave Solution}
-Starting from wave equation,\\
-\begin{equation}
-\vec{\nabla}^2\vec{E}(\vec{s},t) =  \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{s},t)}{\partial t^2}
-\end{equation}
-where\\
-$\vec{E}(\vec{s},t) = \vec{E}(\vec{r},\vec{\theta},\vec{\phi},t)$
-and using laplacian from Eq. 1.15;\\
-Eq. 1.16 becomes\\
-\begin{equation}
-\frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(\vec{r},\vec{\theta},\vec{\phi},t) }{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial \vec{E}(\vec{r},\vec{\theta},\vec{\phi},t)}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{E}(\vec{r},\vec{\theta},\vec{\phi},t)}{\partial \phi^2} = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},\vec{\theta},\vec{\phi},t)}{\partial t^2}
-\end{equation}
-For spherical symmetry, motion is radial which means $\theta$ and $\phi$ are constants,\\
-\begin{equation}
-\frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(\vec{r},t) }{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial \vec{E}(\vec{r},t)}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial \phi^2} = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}
-\end{equation}
-where\\
+\section{Wave Solution In Spherical Coordinates}
 
-$\frac{\partial^2\vec{E}(\vec{r},t)}{\partial \theta^2}$ and $\frac{\partial^2\vec{E}(\vec{r},t)}{\partial \phi^2}$ become zero and we are left with;\\
-\begin{equation}
-\frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(\vec{r},t) }{\partial r}) = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}
-\end{equation}
-\begin{equation}
-\frac{1}{r^2}[r^2\frac{\partial^2\vec{E}(\vec{r},t)}{\partial r^2}+\frac{\partial\vec{E}(\vec{r},t) }{\partial r}.(2r)] = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}
-\end{equation}
-By solving left hand side of the Eq. 1.20, we get;\\
- $\frac{1}{r}\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)]$\\
-So, Eq. 1.20 becomes;\\
-\begin{equation}
-\frac{1}{r}\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2} 
-\end{equation}
-Multiplying by r\\
-\begin{equation}
-\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)] = \frac{r}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2} 
-\end{equation}
-Writing it as;\\
-\begin{equation}
-\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2}{\partial t^2}[r\vec{E}(\vec{r},t)]
-\end{equation}
-Let $r\vec{E}(\vec{r},t) = \vec{T}(\vec{r},t)$\\
-Now, Eq. 1.23 becomes;\\
-\begin{equation}
-\frac{\partial^2}{\partial r^2}[\vec{T}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2}{\partial t^2}[\vec{T}(\vec{r},t)]
-\end{equation}
-This is a wave equation in one dimension, with solution;\\
+Since an isotropic antenna radiates energy in a radially symmetric fashion the logical choice of coordinates for studying them is the spherical coordinate system.
+
+\subsection{Spherical Coordinate System}
+
+The vector derivatives in spherical coordinates are:
+
+\begin{itemize}
+
+   \item Gradient
+
+      \begin{equation}
+      \vec{\nabla} A = \frac{\partial A}{\partial r}\hat{r}+\frac{1}{r}\frac{\partial A}{\partial \theta}\hat{\theta}+\frac{1}{r\sin\theta}\frac{\partial A}{\partial \phi}\hat{\phi}
+      \end{equation}
+
+   \item Divergence
+
+      \begin{equation}
+      \vec{\nabla}.\vec{A} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2A_r)+\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta A_\theta)+\frac{1}{r\sin\theta}\frac{\partial A_\phi}{\partial\phi}
+      \end{equation}
+
+   \item Curl
+
+      \begin{equation}
+      \vec{\nabla}\times\vec{A} = \frac{1}{r\sin\theta}\left[\frac{\partial}{\partial\theta}(\sin\theta A_\phi)-\frac{\partial A_\theta}{\partial\phi}\right]\hat{r}+\frac{1}{r}\left[\frac{1}{\sin\theta}\frac{\partial A_r}{\partial\phi}-\frac{\partial}{\partial r}(rA_\phi)\right]\hat{\theta}+\frac{1}{r}\left[\frac{\partial}{\partial r}(rA_\theta)-\frac{\partial A_r}{\partial \theta}\right]\hat{\phi}
+      \end{equation}
+
+   \item Laplacian
+
+      \begin{equation}\label{laplacian}
+      \nabla^2 \vec{A} = \frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{A}}{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial\vec{A}}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{A}}{\partial \phi^2}
+      \end{equation}
+
+\end{itemize}
+
+\subsection{Deriving the Solution}
+
+Starting from wave equation,
+
+   \begin{equation}\label{wave_eq}
+   \vec{\nabla}^2\vec{E}(\vec{s},t) =  \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{s},t)}{\partial t^2}
+   \end{equation}
+%
+where
+%
+$\vec{E}(\vec{s},t) = \vec{E}(r,\theta,\phi,t)$
+and using the definition of the Laplacian from \eqref{laplacian}, \eqref{wave_eq} becomes
+%
+   \begin{equation}
+   \frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(r,\theta,\phi,t) }{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial \vec{E}(r,\theta,\phi,t)}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{E}(r,\theta,\phi,t)}{\partial \phi^2} = \frac{1}{c^2}\frac{\partial^2\vec{E}(r,\theta,\phi,t)}{\partial t^2}
+   \end{equation}
+
+   For spherical symmetry, the solution is radial which means it cannot depend upon $\theta$ and $\phi$, so that
+%
+   \begin{equation}
+   \frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(\vec{r},t) }{\partial r})+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}(\sin\theta\frac{\partial \vec{E}(\vec{r},t)}{\partial \theta})+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial \phi^2} = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}
+   \end{equation}
+%
+where $\displaystyle \frac{\partial^2\vec{E}(\vec{r},t)}{\partial \theta^2}$ and $\displaystyle \frac{\partial^2\vec{E}(\vec{r},t)}{\partial \phi^2}$ become zero and we are left with
+%
+   \begin{equation}\label{wave_eqn_1}
+   \begin{aligned}
+      \frac{1}{r^2}\frac{\partial}{\partial r}(r^2\frac{\partial\vec{E}(\vec{r},t) }{\partial r}) = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}\\[0.5\baselineskip]
+      \implies \frac{1}{r^2}[r^2\frac{\partial^2\vec{E}(\vec{r},t)}{\partial r^2}+\frac{\partial\vec{E}(\vec{r},t) }{\partial r}.(2r)] = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2}
+   \end{aligned}
+   \end{equation}
+
+   The LHS can be shown to be equal to $\frac{1}{r}\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)]$ so \eqref{wave_eqn_1} becomes
+%
+   \begin{equation}
+   \frac{1}{r}\frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2\vec{E}(\vec{r},t)}{\partial t^2} 
+   \end{equation}
+%
+and multiplying by $r$
+%
+   \begin{equation}\label{wave_eqn_2}
+   \frac{\partial^2}{\partial r^2}[r\vec{E}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2}{\partial t^2}[r\vec{E}(\vec{r},t)]
+   \end{equation}
+%
+where we have moved the $r$ inside on the RHS because the partial derivative is with respect to $t$ and not $r$.
+
+If we now define $r\vec{E}(\vec{r},t) = \vec{T}(\vec{r},t)$ then \eqref{wave_eqn_2} becomes
+%
+   \begin{equation}
+   \frac{\partial^2}{\partial r^2}[\vec{T}(\vec{r},t)] = \frac{1}{c^2}\frac{\partial^2}{\partial t^2}[\vec{T}(\vec{r},t)]
+   \end{equation}
+
+This is the wave equation in one dimension, with the well-known solution
+%
 \begin{equation}
 \vec{T}(\vec{r},t) = \exp{i(kr-wt)}\hat{r}
 \end{equation}
-Or it can be written as;\\
+%
+or equivalently
+%
 \begin{equation}
-\vec{T}(\vec{r},t) = \sin(kr-wt)
-\end{equation}
-As $r\vec{E}(\vec{r},t) = \vec{T}(\vec{r},t)$\\
-So;\\
-\begin{equation}
-r\vec{E}(\vec{r},t) = \sin(kr-wt)
-\end{equation}
-And the final solution of wave equation is;\\
-\begin{equation}
-\vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt)
+   \vec{T}(\vec{r},t) = \sin(kr-wt) \hat{r}
 \end{equation}
 
-\subsection{Charge Density}
+As $r \vec{E}(\vec{r},t) = \vec{T}(\vec{r},t)$ so
+%
+   \begin{equation}
+      r\vec{E}(\vec{r},t) = \sin(kr-wt) \hat{r}
+   \end{equation}
+
+And the final solution of wave equation is
+%
+\begin{equation}
+   \vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt) \hat{r}
+\end{equation}
+
+
+
+\section{Calculating the Charge Density}
+
 Charge density $\rho$ is a measure of electric charge per unit volume of space, in one, two or three dimensions.\\
 More specifically, We have;\\
 1. Linear charge density: is the amount of electric charge per unit length.\\
