@@ -9,7 +9,7 @@ CONTINUOUS=
 
 
 MAIN=thesis
-SOURCES=$(MAIN).tex Makefile #preamble.tex
+SOURCES=$(MAIN).tex Makefile chap1.tex chap2.tex #preamble.tex
 FIGURES=
 
 

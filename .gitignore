@@ -10,3 +10,5 @@
 *.lof
 *.run.xml
 *.aux.blg
+*.bbl
+*.blg
