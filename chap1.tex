@@ -1,10 +1,10 @@
-\documentclass[a4paper, twoside] {thesis}
-\usepackage{amsmath}
-\usepackage{esvect}
-\usepackage{amssymb}
-\usepackage{cclicenses}
+%\documentclass[a4paper, twoside] {thesis}
+%\usepackage{amsmath}
+%\usepackage{esvect}
+%\usepackage{amssymb}
+%\usepackage{cclicenses}
 
-\begin{document}
+%\begin{document}
 	
 \chapter{Chapter 1}
 \section{Introduction}
@@ -21,26 +21,26 @@ Following are the well known Maxwell's equations.\\
 1. Gauss’s Law For Electricity\\
 Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.\\
 \begin{equation}
-\vec{\triangledown}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
+\vec{\nabla}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
 \end{equation}
 2. Gauss’s Law For Magnetism\\
 There are no magnetic monopoles. The total magnetic flux through a closed surface is zero.\\
 \begin{equation}
-\vec{\triangledown}.\vec{B} = 0
+\vec{\nabla}.\vec{B} = 0
 \end{equation}
 3. Faraday’s Law Of Induction\\
 The voltage induced in a closed circuit is proportional to the rate of change of the magnetic flux.\\
 \begin{equation}
-\vec{\triangledown}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
+\vec{\nabla}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
 \end{equation}
 4. Ampere’s Law\\
 The magnetic field induced around a closed loop is proportional to the electric current.\\
 \begin{equation}
-\vec{\triangledown}\times\vec{B} =\mu_{o}\vec{J}
+\vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}
 \end{equation}
 and with the Maxwell's correction Ampere's law becomes\\
 \begin{equation}
-\vec{\triangledown}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
+\vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
 \end{equation}
 where\\
 
@@ -83,5 +83,5 @@ To achieve this, I will use Python to compare the expected simulated outcomes to
 \section{Work Plan}
 Starting with Maxwell's Equations in vacuum, derive Electromagnetic Wave(EMW) equations, then calculate charge and current densities by using EMW solution(for free space) in spherical coordinates along with Maxwell's equations to study the phenomenon of signals transmission in antennas.
 
-\end{document}
+%\end{document}
 
