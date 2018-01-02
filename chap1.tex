@@ -9,34 +9,45 @@ To overcome the problem of signal efficiency at large distances we use an array 
 \section{Maxwell's Equations}
 
 Maxwell’s equations are a set of partial differential equations for the electric and magnetic fields as functions of space and time, that together with the Lorentz force law, form the foundation of classical electromagnetism, Quantum field theory, Classical optics, and electric circuits.\\ 
-Following are the well known Maxwell's equations.\\
-1. Gauss’ Law For Electrostatics\\
-Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.\\
-\begin{equation}
-\vec{\nabla}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
-\end{equation}
-2. Gauss’s Law For Magnetism\\
-There are no magnetic monopoles. The total magnetic flux through a closed surface is zero.\\
-\begin{equation}
-\vec{\nabla}.\vec{B} = 0
-\end{equation}
-3. Faraday’s Law Of Induction\\
-The voltage induced in a closed circuit is proportional to the rate of change of the magnetic flux.\\
-\begin{equation}
-\vec{\nabla}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
-\end{equation}
-4. Ampere’s Law\\
-The magnetic field induced around a closed loop is proportional to the electric current.\\
-\begin{equation}
-\vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}
-\end{equation}
-and with the Maxwell's correction Ampere's law becomes\\
-\begin{equation}
-\vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
-\end{equation}
-where\\
+Following are the well known Maxwell's equations.
 
-$\epsilon_{o}\frac{\partial\vec{E}}{\partial t}\equiv$ Displacement Current
+\begin{enumerate}
+   \item Gauss’ Law For Electrostatics
+
+      Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.\\
+      \begin{equation}
+      \vec{\nabla}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
+      \end{equation}
+
+   \item Gauss’s Law For Magnetism
+
+   There are no magnetic monopoles. The total magnetic flux through a closed surface is zero.\\
+   \begin{equation}
+   \vec{\nabla}.\vec{B} = 0
+   \end{equation}
+
+   \item Faraday’s Law Of Induction
+
+   The voltage induced in a closed circuit is proportional to the rate of change of the magnetic flux.\\
+   \begin{equation}
+   \vec{\nabla}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
+   \end{equation}
+
+   \item Ampere’s Law
+
+      The magnetic field induced around a closed loop is proportional to the electric current.\\
+      \begin{equation}
+      \vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}
+      \end{equation}
+      and with the Maxwell's correction Ampere's law becomes\\
+      \begin{equation}
+      \vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
+      \end{equation}
+      where\\
+
+      $\epsilon_{o}\frac{\partial\vec{E}}{\partial t}\equiv$ Displacement Current
+
+\end{enumerate}
 
 \section{Antennas and Beam Forming}
 
@@ -56,19 +67,40 @@ To get stronger beam forming effect we will add more antennas in the array.
 A phased array is composed of lots of radiating elements with a correct phase relationship so that the multiple transmitted patterns combine in the transmitting media by natural coherence of these radiations, and form a “beam”, a signal targeted to the destination.\\
 By this way, The phases overlap and amplify each other and in the desired direction (where the destined receiver is located) and where the beam is not supposed to go the phases collide and destroy each other.\\
 We can change the directionality of the beam by controlling the phase and relative amplitude of the signal at each transmitter. So by phased arrays we can steer the main beam of the antennas without physically moving the antenna.\\
-Depending upon their geometry we have different configuration of arrays:\\
-1. Simple Arrays\\
- Linear\\
-  Antenna elements arranged along a straight line.\\
- Planar\\
-  Antenna elements arranged over some planar surfaces.\\
-2. Complex Arrays\\
-Design by placing elements on certain specific position to get desirable beam.\\
-In general there are two types of phased arrays:\\
-1. Passive Phased Array\\
-In which the antenna elements are connected to a single transmitter and receiver.\\
-2. Active Phased Array\\
-In which each antenna element has its own transmitter and receiver.Active arrays are more advanced.
+Depending upon their geometry we have different configuration of arrays:
+
+\begin{enumerate}
+
+   \item Simple Arrays
+      \begin{enumerate}
+
+         \item Linear
+
+            Antenna elements arranged along a straight line.
+
+         \item Planar
+
+            Antenna elements arranged over some planar surfaces.
+
+      \end{enumerate}
+
+   \item Complex Arrays
+
+      Design by placing elements on certain specific position to get desirable beam. In general there are two types of phased arrays:
+
+      \begin{enumerate}
+
+         \item Passive Phased Array
+
+            In which the antenna elements are connected to a single transmitter and receiver.
+
+         \item Active Phased Array
+
+            In which each antenna element has its own transmitter and receiver.Active arrays are more advanced.
+
+      \end{enumerate}
+
+\end{enumerate}
 
 \section{Scope of the Project}
 
