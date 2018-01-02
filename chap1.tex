@@ -1,87 +1,122 @@
-\documentclass[a4paper, twoside] {thesis}
-\usepackage{amsmath}
-\usepackage{esvect}
-\usepackage{amssymb}
-\usepackage{cclicenses}
+\chapter{Introduction}
 
-\begin{document}
-	
-\chapter{Chapter 1}
-\section{Introduction}
-A person, who needs to convey a thought or an idea can do so by voice communication, which takes place through sound waves.However, if two people want to communicate who are at longer distances, then we have to convert these sound waves into electromagnetic waves.The device, which converts the required information signal into electromagnetic waves, is known as an Antenna.\\
-Now what if we are dealing with signals at very large distances as they are very faint with low frequencies like cosmic signals...Radio Telescopes are use for this purpose which are consist of large dish antennas because large diameters are require to resolve radio sources at low frequencies and longer wavelengths so a large collecting area is needed to detect the signals at very large distances.\\
-The infeasibility of constructing such large antenna dishes and the demand for higher resolution and sensitivity led us to the development of interferometric techniques; involves the use of multiple smaller techniques to get more reliable results instead of using a large setup which is hard to build up due to mechanical limitations.\\
-To overcome the problem of signals efficiency at large distances we use an array of antennas to effectively synthesis a large aperture with an increased sensitivity and resolution.
+A person, who needs to convey a thought or an idea can do so by voice communication, which takes place through sound waves. However, if two people want to communicate who are at longer distances, then we have to convert these sound waves into electromagnetic waves. The device, which converts the required information signal into electromagnetic waves, is known as an Antenna.
+
+Now what if we are dealing with signals at very large distances as they are very faint with low frequencies like cosmic signals. Radio Telescopes are used for this purpose which consist of large dish antennas because large diameters are require to resolve radio sources at low frequencies and longer wavelengths so a large collecting area is needed to detect the signals at very large distances.
+
+The infeasibility of constructing such large antenna dishes and the demand for higher resolution and sensitivity led us to the development of interferometric techniques which involve the use of multiple smaller antennae to get more reliable results instead of using a large setup which is hard to build up due to mechanical limitations.
+
+To overcome the problem of signal efficiency at large distances we use an array of antennas to effectively synthesize a large aperture with an increased sensitivity and resolution.
  
-\section{Literature Review}
 
-\subsubsection{Maxwell's Equations}
-Maxwell’s equations are a set of partial differential equations for the electric and magnetic fields as functions of space and time that, together with the Lorentz force law, form the foundation of classical electromagnetism, Quantum field theory, Classical optics, and electric circuits.\\ 
-Following are the well known Maxwell's equations.\\
-1. Gauss’s Law For Electricity\\
-Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.\\
-\begin{equation}
-\vec{\triangledown}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
-\end{equation}
-2. Gauss’s Law For Magnetism\\
-There are no magnetic monopoles. The total magnetic flux through a closed surface is zero.\\
-\begin{equation}
-\vec{\triangledown}.\vec{B} = 0
-\end{equation}
-3. Faraday’s Law Of Induction\\
-The voltage induced in a closed circuit is proportional to the rate of change of the magnetic flux.\\
-\begin{equation}
-\vec{\triangledown}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
-\end{equation}
-4. Ampere’s Law\\
-The magnetic field induced around a closed loop is proportional to the electric current.\\
-\begin{equation}
-\vec{\triangledown}\times\vec{B} =\mu_{o}\vec{J}
-\end{equation}
-and with the Maxwell's correction Ampere's law becomes\\
-\begin{equation}
-\vec{\triangledown}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
-\end{equation}
-where\\
+\section{Maxwell's Equations}
 
-$\epsilon_{o}\frac{\partial\vec{E}}{\partial t}\equiv$ Displacement Current
+Maxwell’s equations are a set of partial differential equations for the electric and magnetic fields as functions of space and time, that together with the Lorentz force law, form the foundation of classical electromagnetism, Quantum field theory, Classical optics, and electric circuits. Following are the well known Maxwell's equations \cite{griffiths1962introduction}.
 
-\subsubsection{Isotropic Antenna}
-Antenna is a specialized transducer that converts radio frequency into alternating current or vice versa, and as antenna patterns are the same while transmitting or receiving, thus receiving end works the same as the transmitting end.\\
-There are several different types of antennas and they all have their place. One of them is an isotropic antenna.\\
-Isotropic antenna is an ideal antenna that radiates its power uniformly in all directions over a sphere centered on the source, and we get the same intensity of radiation in all directions.
+\begin{enumerate}
+   \item Gauss’ Law For Electrostatics
 
-\subsubsection{Beam Forming}
-When a signal is sending out it gets wider and wider by losing its strength. Here we need a technique to focus signals.\\
-Beam forming is a technique use to combine signals from an array of antennas to effectively synthesis a single aperture and beam, to simulate a large directional antenna.\\
-It is achieved by combining signals from antennas in an array with right delay and phase, in such a way that signals at particular angles experience constructive interference while others experience destructive interference, and we get a directive beam.\\
-Beam forming is considered as a subset of smart antennas or Advanced Antenna Systems (AAS), Which typically exploit the properties of multiple antennas operating together.\\
-To get stronger beam forming effect we will add more antennas in the array.
+      Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.
 
-\subsubsection{Phased Array}
-A phased array is composed of lots of radiating elements with a correct phase relationship so that the multiple transmitted patterns combine in the air by natural coherence of these radiations, and form a virtual “beam”, a signal targeted to the destination.\\
-By this way, The phases overlap and amplify each other and in the desired direction (where the destined receiver is located) and where the beam is not supposed to go the phases will collide and destroy each other.\\
-We can change the directionality of the beam by controlling the phase and relative amplitude of the signal at each transmitter. So by phased arrays we can steer the main beam of the antennas without physically moving the antenna.\\
-Depending upon their geometry we have different configuration of arrays:\\
-1. Simple Arrays\\
- Linear\\
-  Antenna elements arranged along a straight line.\\
- Planar\\
-  Antenna elements arranged over some planar surfaces.\\
-2. Complex Arrays\\
-Design by placing elements on certain specific position to get desirable beam.\\
-In general there are two types of phased arrays:\\
-1. Passive Phased Array\\
-In which the antenna elements are connected to a single transmitter and receiver.\\
-2. Active Phased Array\\
-In which each antenna element has its own transmitter and receiver.Active arrays are a more advanced.
+      \begin{equation}
+      \vec{\nabla}.\vec{E} = \frac{\rho_{enc}}{\epsilon_{o}}
+      \end{equation}
 
-\section{Aims and Objective}
-Study a directive beam from linear array of multiple antennas by signal spacing among them. 
-To achieve this, I will use Python to compare the expected simulated outcomes to theoretical results.
+   \item Gauss’s Law For Magnetism
 
-\section{Work Plan}
-Starting with Maxwell's Equations in vacuum, derive Electromagnetic Wave(EMW) equations, then calculate charge and current densities by using EMW solution(for free space) in spherical coordinates along with Maxwell's equations to study the phenomenon of signals transmission in antennas.
+   There are no magnetic monopoles. The total magnetic flux through a closed surface is zero.
 
-\end{document}
+   \begin{equation}
+   \vec{\nabla}.\vec{B} = 0
+   \end{equation}
 
+   \item Faraday’s Law Of Induction
+
+   The voltage induced in a closed circuit is proportional to the rate of change of the magnetic flux.
+
+   \begin{equation}
+   \vec{\nabla}\times\vec{E} = - \frac{\partial\vec{B}}{\partial t}
+   \end{equation}
+
+   \item Ampere’s Law
+
+      The magnetic field induced around a closed loop is proportional to the electric current.
+      %
+      \begin{equation}
+      \vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}
+      \end{equation}
+      %
+      and with the Maxwell's correction Ampere's law becomes
+      %
+      \begin{equation}
+      \vec{\nabla}\times\vec{B} =\mu_{o}\vec{J}+\mu_{o}\epsilon_{o}\frac{\partial\vec{E}}{\partial t}
+      \end{equation}
+      %
+      where
+
+      $\epsilon_{o}\frac{\partial\vec{E}}{\partial t}\equiv$ Displacement Current
+
+\end{enumerate}
+
+\section{Antennas and Beam Forming}
+
+\subsection{Isotropic Antenna}
+Antenna is a specialized transducer that converts radio frequency into alternating current or vice versa, and as antenna patterns are the same while transmitting or receiving, thus receiving end works the same as the transmitting end.
+
+There are several different types of antennas and they all have their place. One of them is an isotropic antenna. The isotropic antenna is an ideal antenna that radiates its power uniformly in all directions over a sphere centered on the source, and we get the same intensity of radiation in all directions.
+
+\subsection{Beam Forming}
+
+When a signal is sent out it gets wider and wider there-by losing its strength. Therefore we need a technique to focus signals.
+
+Beam forming is a technique use to combine signals from an array of antennas to effectively synthesize a single aperture and beam, to simulate a large directional antenna. It is achieved by combining signals from antennas in an array with right delay and phase, in such a way that signals at particular angles experience constructive interference while others experience destructive interference, and we get a directive beam.
+
+Beam forming is considered as a subset of smart antennas or Advanced Antenna Systems (AAS), which typically exploit the properties of multiple antennas operating together. To get stronger beam forming effect we will add more antennas in the array.
+
+\subsection{Phased Array}
+
+A phased array is composed of lots of radiating elements with a correct phase relationship so that the multiple transmitted patterns combine in the transmitting media by natural coherence of these radiations, and form a “beam”, a signal targeted to the destination.
+
+By this way, The phases overlap and amplify each other and in the desired direction (where the destined receiver is located) and where the beam is not supposed to go the phases collide and destroy each other.
+
+We can change the directionality of the beam by controlling the phase and relative amplitude of the signal at each transmitter. So by phased arrays we can steer the main beam of the antennas without physically moving the antenna.
+
+Depending upon their geometry we have different configuration of arrays:
+
+\begin{enumerate}
+
+   \item Simple Arrays
+      \begin{enumerate}
+
+         \item Linear
+
+            Antenna elements arranged along a straight line.
+
+         \item Planar
+
+            Antenna elements arranged over some planar surfaces.
+
+      \end{enumerate}
+
+   \item Complex Arrays
+
+      Design by placing elements on certain specific position to get desirable beam. In general there are two types of phased arrays:
+
+      \begin{enumerate}
+
+         \item Passive Phased Array
+
+            In which the antenna elements are connected to a single transmitter and receiver.
+
+         \item Active Phased Array
+
+            In which each antenna element has its own transmitter and receiver. Active arrays are more advanced.
+
+      \end{enumerate}
+
+\end{enumerate}
+
+\section{Scope of the Project}
+
+This project analyzed a directive beam created by a linear array of multiple antennas by signal spacing among them. 
+To achieve this, I used Python to compare the expected simulated outcomes to theoretical results (which were calculated using Maxwell's Equation and the Electromagnetic Wave Equation).

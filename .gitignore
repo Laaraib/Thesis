@@ -1,0 +1,14 @@
+.refresh
+*.aux
+*.log
+*.bcf
+*.fls
+*.pdf
+!comsats-logo.pdf
+*.toc
+*.fdb_latexmk
+*.lof
+*.run.xml
+*.aux.blg
+*.bbl
+*.blg
