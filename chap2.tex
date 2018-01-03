@@ -2,7 +2,7 @@
 
 \section{Maxwell's Equations in Vacuum}
 
-As in vacuum charge density $\rho$ and current density $\vec{j}$ vanishes, So Maxwell's equations become:
+As in vacuum charge density $\rho$ and current density $\vec{j}$ vanishes, so Maxwell's equations become:
 
 \begin{enumerate}
 
@@ -38,7 +38,7 @@ Now if we apply curl to \eqref{faraday_induction}
    \vec{\nabla}\times(\vec{\nabla}\times\vec{E}) = - \vec{\nabla}\times(\frac{\partial\vec{B}}{\partial t})
    \end{equation}
 %
-using the definition of second derivative:
+Using the definition of second derivative:
 %
    \begin{equation}
    \vec{\nabla}\times(\vec{\nabla}\times\vec{A}) = \vec{\nabla}(\vec{\nabla}.\vec{A})-{\nabla}^2A
@@ -58,13 +58,13 @@ Substituting in \eqref{gauss_law} and \eqref{amperes_law} we get:
 
 Here each component of $\vec{E}$ satisfies the Electromagnetic Wave (EMW) Equation for electric field.
 
-Similarly by applying curl to \eqref{amperes_law} we get the EMW equation for magnetic field:
+Similarly by applying curl to \eqref{amperes_law}, we get the EMW equation for magnetic field:
 %
    \begin{equation}
    \nabla^2\vec{B} =  \mu_{o}\epsilon_{o}\frac{\partial^2\vec{B}}{\partial t^2}
    \end{equation}
 %
-where $\mu_{o} = 1.257\times10^{-6} \, m kg s^{-2} A^{-2}$ and $\epsilon_{o} = 8.854 \times 10^{-12} m^{-3} kg^{-1} s^4 A^2$.
+Where $\mu_{o} = 1.257\times10^{-6} \, m kg s^{-2} A^{-2}$ and $\epsilon_{o} = 8.854 \times 10^{-12} m^{-3} kg^{-1} s^4 A^2$.
 
 So that
 %
@@ -79,7 +79,7 @@ This means that electromagnetic waves travel through vacuum with the speed of li
 
 \subsection{Poynting Vector}
 
-The Poynting vector $\vec{S}$ represents the directional energy flux i.e, the energy transfer per unit area per unit time of an electromagnetic field.
+The Poynting vector $\vec{S}$ represents the directional energy flux i.e, the energy transfer per unit area per unit time of an electromagnetic field \cite{wang1986electromagnetic}.
 %
    \begin{equation}\label{eqn:poynting}
       \vec{S} = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
@@ -94,7 +94,7 @@ Since an isotropic antenna radiates energy in a radially symmetric fashion the l
 
 \subsection{Spherical Coordinate System}
 
-The vector derivatives in spherical coordinates are:
+The vector derivatives in spherical coordinates are \cite{anton2002calculus}:
 
 \begin{itemize}
 
@@ -202,9 +202,9 @@ And the final solution of wave equation is
 
 
 
-\section{Calculating the Charge Density}
+\section{Calculating The Charge Density}
 
-Charge density $\rho$ is a measure of electric charge per unit volume of space, in one, two or three dimensions. More specifically, We have:
+Charge density $\rho$ is a measure of electric charge per unit volume of space, in one, two or three dimensions \cite{wang1986electromagnetic}. More specifically, We have:
 
 \begin{enumerate}
    \item Linear charge density: is the amount of electric charge per unit length.
@@ -255,9 +255,9 @@ is invalid for EMWs but is valid for acoustic/sound waves.
 
 From \eqref{eqn:poynting} EMWs are transverse waves, but sound waves are longitudinal waves. As we had spherically symmetric EMWs over a central point carrying equal energy in all directions means isotropic EMWs.
 
-If we consider a sphere about the central point, at a large radius, then at that radius the wave over a reasonable zoomed in area is essentially planar. We know electric and magnetic field of a plane wave in free space is always perpendicular to the direction of propagation of wave. So, The electric field would have to be tangent to the surface of sphere everywhere, and continuous along that surface, which means we have a continuous vector field, tangent everywhere to the surface of a sphere.
+If we consider a sphere about the central point, at a large radius, then at that radius the wave over a reasonable zoomed in area is essentially planar. We know electric and magnetic field of a plane wave in free space is always perpendicular to the direction of propagation of wave. So, the electric field would have to be tangent to the surface of sphere everywhere, and continuous along that surface, which means we have a continuous vector field, tangent everywhere to the surface of a sphere.
 
-According to Hairy Ball Theorem:
+According to Hairy Ball Theorem \cite{milnor1978analytic}:
 %
 \begin{quote}
    For a sphere, if $f$ is a continuous function that assigns a vector in $\mathbb{R}^3$ to every point $p$ on the sphere such that $f(p)$ is always tangent to the sphere at point $p$ then there is at least one point $p_0$ such that $f(p_0) = 0$.
