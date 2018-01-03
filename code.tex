@@ -1,0 +1,38 @@
+\chapter{Python Code}
+
+\section{Intensity vs. lateral distance for a single source}\label{code:single}
+
+\begin{Verbatim}[fontsize=\small,baselinestretch=0.9]
+import matplotlib.pyplot as plt
+from math import sqrt, sin
+w=1 #(t'=wt)
+k=1 #(r'=kr)
+L=1
+
+def r(x):
+   return sqrt(L**2+x**2)
+
+def Ex(x,t):
+   return (x/r(x)**2)*(sin(k*r(x)-w*t))
+
+def Ey(x,t):
+   return (L/r(x)**2)*(sin(k*r(x)-w*t))
+
+def I(x,t):
+   return (Ex(x,t)**2+Ey(x,t)**2)
+
+#plot between intensity and distance.
+a=[]
+b=[]
+
+for i in range(-150,150,1):
+   x=i/10.0
+   y=I(x,0)
+   a.append(x)
+   b.append(y)
+
+fig= plt.figure()
+axes=fig.add_subplot(111)
+axes.plot(a,b)
+plt.show()
+\end{Verbatim}
