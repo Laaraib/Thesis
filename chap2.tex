@@ -81,8 +81,8 @@ This means that electromagnetic waves travel through vacuum with the speed of li
 
 The Poynting vector $\vec{S}$ represents the directional energy flux i.e, the energy transfer per unit area per unit time of an electromagnetic field.
 %
-   \begin{equation}
-   \vec{S} = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
+   \begin{equation}\label{eqn:poynting}
+      \vec{S} = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
    \end{equation}
 %
 which shows that the direction of power flow (propagation of EMW) at any point is normal to both $\vec{E}$ and $\vec{B}$. This implies that EMW/light is a Transverse wave. The SI unit of the Poynting vector is the watt per square meter, $W/m^{-2}$.
@@ -245,29 +245,31 @@ We determined solution \eqref{eqn:rho_final} for the EM wave equation in \textbf
 
 \subsection{The resolution}
 
-The wave solution;\\
-\begin{equation}
-\vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt)
-\end{equation}
-is invalid for EMWs but is valid for acoustic/sound waves.\\
+The wave solution
+%
+   \begin{equation}
+      \vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt)
+   \end{equation}
+%
+is invalid for EMWs but is valid for acoustic/sound waves.
 
-\subsubsection{Reason}
-From Eq. 1.11, EMWs are transverse waves, but sound waves are longitudinal waves.\\
-As we had spherically symmetric EMWs over a central point;
-Carrying equal energy in all directions means isotropic EMWs.\\
-And if we consider a sphere about the central point, at a large radius, then at that radius the wave over a reasonable area is essentially planar. We know electric and magnetic field of a plane wave in free space is always perpendicular to the direction of propagation of wave.\\
-So, The electric field would have to be tangent to the surface of sphere everywhere, and continuous along that surface; Which means we have a continuous vector field, tangent to the surface of a sphere.\\
-Now???\\
-According to Hairy Ball Theorem
-\begin{center}
-	"For a sphere, If f is a continuous function that assigns a vector in $R^3$ to every point p on the sphere such that f(p) is always tangent to the sphere at point p then there is at least one point p such that f(p)=0."\\
-\end{center}
-This means that a continuous vector field, tangent to the surface of a sphere must fall to zero at one or more points on the sphere.\\
-Which is inconsistent with the assumption of an isotropic EMWs.
+From \eqref{eqn:poynting} EMWs are transverse waves, but sound waves are longitudinal waves. As we had spherically symmetric EMWs over a central point carrying equal energy in all directions means isotropic EMWs.
+
+If we consider a sphere about the central point, at a large radius, then at that radius the wave over a reasonable zoomed in area is essentially planar. We know electric and magnetic field of a plane wave in free space is always perpendicular to the direction of propagation of wave. So, The electric field would have to be tangent to the surface of sphere everywhere, and continuous along that surface, which means we have a continuous vector field, tangent everywhere to the surface of a sphere.
+
+According to Hairy Ball Theorem:
+%
+\begin{quote}
+   For a sphere, if $f$ is a continuous function that assigns a vector in $\mathbb{R}^3$ to every point $p$ on the sphere such that $f(p)$ is always tangent to the sphere at point $p$ then there is at least one point $p_0$ such that $f(p_0) = 0$.
+\end{quote}
+
+This means that a continuous vector field, tangent to the surface of a sphere must fall to zero at one or more points on the sphere. This is inconsistent with the assumption of an isotropic EMWs.
 
 \subsection{Isotropic Antenna}
-As spherically isotropic EMWs are not possible, so there are no real isotropic radiators for EMWs, and because of this an isotropic electromagnetic antenna is a hypothetical antenna which does not exist in actual.\\
-But, isotropic sound waves are possible as they are longitudinal waves and does not have any perpendicular component.
+
+It therefore follows that spherically isotropic EMWs are not possible, so there are no real isotropic radiators for EMWs. The isotropic electromagnetic antenna is a hypothetical antenna which cannot exist in reality.
+
+But, isotropic sound waves are possible as they are longitudinal waves (that do not have any perpendicular component).
 
 \section{Computational Work}
 Our task is to construct the plot between distance and intensity, for multiple antenna sources arrange in a linear array and by managing phase between them we get a directive beam with maximum intensity .\\
