@@ -9,7 +9,7 @@ CONTINUOUS=
 
 
 MAIN=thesis
-SOURCES=$(MAIN).tex Makefile chap1.tex chap2.tex chap3.tex code.tex
+SOURCES=$(MAIN).tex Makefile chap1.tex chap2.tex chap3.tex chap4.tex code.tex
 FIGURES=
 
 
@@ -28,11 +28,6 @@ $(MAIN).pdf: $(MAIN).tex .refresh $(SOURCES) $(FIGURES) #preamble.fmt
 		$(LATEXMK) $(LATEXMKOPT) $(CONTINUOUS) -pdflatex="$(LATEX) $(LATEXOPT) $(NONSTOP) %O %S" $(MAIN)
 
 
-# Compile the preamble
-#preamble.fmt: preamble.tex
-		#pdftex -ini -jobname=preamble "&pdflatex preamble.tex\dump"
-
-
 force:
 		touch .refresh
 		rm $(MAIN).pdf
@@ -43,7 +38,7 @@ clean:
 		$(LATEXMK) -C $(MAIN)
 		rm -f $(MAIN).pdfsync
 		rm -rf *~ *.tmp
-		rm -f *.fmt *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk
+		rm -f *.fmt *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk *.run.xml
 		rm -f *.eps *-converted-to.pdf
 		rm -f paperNotes.bib
 
