@@ -1,82 +1,59 @@
-\section{Computational Work}
-Our task is to construct the plot between distance and intensity, for multiple antenna sources arrange in a linear array and by managing phase between them we get a directive beam with maximum intensity .\\
-First, we have to figure out an equation for intensity.\\
-Let, we have a single source which is at distance L from the point of observation x=0, Now find the intensity at any point, say x from x=0, which is at distance r from the source?\\
-As intensity is defined as power transferred per unit area, where the area is measured on the plane perpendicular to the direction of propagation of the energy. which is same as poynting vector, So by using the Eq. 1.11 for finding intensity.\\
+\chapter{Simulating a Phase Array}
+
+
+My task was to construct the plot between intensity and lateral distance, for multiple antenna sources arranged in a linear array and by managing only the phase between them to produce a directed beam (one with maximum intensity at a location of my choice).
+
+\section{Calculating Intensity of a Single Antenna}
+
+Let us have a single source which is at distance $L$ from the point of observation $x = 0$. Now find the intensity at any point, at a lateral distance $x$ from the center of the screen. This point is at distance $r$ from the source.
+
+Intensity is defined as power transferred per unit area, where the area is measured on the plane perpendicular to the direction of propagation of the energy. This is same as the Poynting vector. So we use \eqref{eqn:poynting} for finding intensity.
+%
 \begin{equation}
-I = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
+   I = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
 \end{equation}
-Where $\vec{B} = \vec{E}/c$,\\
+%
+where $\displaystyle |\vec{B}| = \frac{|\vec{E}|}{c}$
+
 \begin{equation}
-I = \frac{\sqrt{\mu_{o}{\epsilon_{o}}}}{\mu_{o}}E^2
+      I = \frac{\sqrt{\mu_{o}{\epsilon_{o}}}}{\mu_{o}}E^2 
+        = c\epsilon_{o}E^2
 \end{equation}
+%
+so intensity is directly proportional to square of electric field, i.e
+%
 \begin{equation}
-I = c\epsilon_{o}E^2
+   I \propto E^2
 \end{equation}
-So,\\
-Intensity is directly proportional to square of electric field, i.e\\
+
+From \eqref{eqn:radial_E} the electric field of a (hypothetical) isotropic antenna is
+%
 \begin{equation}
-I \propto E^2
+   \vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt) \, \hat{r}
 \end{equation}
-From Eq. 1.28, electric field for point at origin is ,\\
-\begin{equation}
-\vec{E}(\vec{r},t) = \frac{1}{r}\sin(kr-wt)\hat{r}
-\end{equation}
-And for the point x from x=0, at distance r from the source;\\
-$r(x) = \sqrt{L^2+x^2}$ and $\hat{r} = \cos\theta\hat{x}+\sin\theta\hat{y}$\\
-So,\\
-Electric field component along x-axis is\\
+
+And for the point $x$ on the screen the distance $r$ from the source is given by $r(x) = \sqrt{L^2+x^2}$ and $\hat{r} = \cos\theta\hat{x}+\sin\theta\hat{y}$\\
+
+So the Electric field component along x-axis is
+%
 \begin{equation}
 \vec{E}_x(x,t) = \frac{x}{r^2}\sin(kr-wt)
 \end{equation}
-and;\\
-Electric field component along y-axis is\\
+%
+and the Electric field component along y-axis is
+%
 \begin{equation}
 \vec{E}_y(x,t) = \frac{L}{r^2}\sin(kr-wt)
 \end{equation}
-Final equation for intensity becomes;\\
+
+Final equation for intensity becomes
+%
 \begin{equation}
-I = E_x^2(x,t)+E_y^2(x,t)
+   I = E_x^2(x,t)+E_y^2(x,t)
 \end{equation}
-Now, by using python, plot distance and intensity for the single source;\\
-\begin{verbatim}
-import matplotlib.pyplot as plt
-from math import sqrt, sin
-w=1 #(t'=wt)
-k=1 #(r'=kr)
-L=1
 
-def r(x):
-return sqrt(L**2+x**2)
+Now, using python, I plotted distance vs. intensity for the single source. The relevant python code can be found in appendix \ref{code:single}.
 
-def Ex(x,t):
-return (x/r(x)**2)*(sin(k*r(x)-w*t))
-
-def Ey(x,t):
-return (L/r(x)**2)*(sin(k*r(x)-w*t))
-
-print(Ex(3,1))
-print(Ey(3,1))
-
-def I(x,t):
-return (Ex(x,t)**2+Ey(x,t)**2)
-
-print(I(3,5))
-
-#plot between intensity and distance.
-a=[]
-b=[]
-for i in range(-150,150,1):
-x=i/10.0
-y=I(x,0)
-a.append(x)
-b.append(y)
-#x= x+1
-fig= plt.figure()
-axes=fig.add_subplot(111)
-axes.plot(a,b)
-plt.show()
-\end{verbatim}
 
 \begin{figure}[ht]
 \centering	
@@ -152,7 +129,3 @@ plt.show()
     \includegraphics[scale=0.45]{figure_2.png}
 	\caption{Plot between distance and intensity}
 \end{figure}
-
-
-
-%\end{document}
