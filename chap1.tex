@@ -2,7 +2,7 @@
 
 A person, who needs to convey a thought or an idea can do so by voice communication, which takes place through sound waves. However, if two people want to communicate who are at longer distances, then we have to convert these sound waves into electromagnetic waves. The device, which converts the required information signal into electromagnetic waves, is known as an Antenna.
 
-Now what if we are dealing with signals at very large distances as they are very faint with low frequencies like cosmic signals. Radio Telescopes are used for this purpose which consist of large dish antennas because large diameters are require to resolve radio sources at low frequencies and longer wavelengths so a large collecting area is needed to detect the signals at very large distances.
+Now what if we are dealing with signals at very large distances as they are very faint with low frequencies like cosmic signals. Radio Telescopes are used for this purpose which consist of large dish antennas because large diameters are require to resolve radio sources at low frequencies and longer wavelengths so a large collecting area is needed to detect the signals at very large distances \cite{christiansen1987radiotelescopes}.
 
 The infeasibility of constructing such large antenna dishes and the demand for higher resolution and sensitivity led us to the development of interferometric techniques which involve the use of multiple smaller antennae to get more reliable results instead of using a large setup which is hard to build up due to mechanical limitations.
 
@@ -11,10 +11,12 @@ To overcome the problem of signal efficiency at large distances we use an array 
 
 \section{Maxwell's Equations}
 
-Maxwell’s equations are a set of partial differential equations for the electric and magnetic fields as functions of space and time, that together with the Lorentz force law, form the foundation of classical electromagnetism, Quantum field theory, Classical optics, and electric circuits. Following are the well known Maxwell's equations \cite{griffiths1962introduction}.
+Maxwell’s equations are a set of partial differential equations for the electric and magnetic fields as functions of space and time, that together with the Lorentz force law, form the foundation of classical electromagnetism, Quantum field theory, Classical optics, and electric circuits \cite{griffiths1962introduction}.
+
+Following are the well known Maxwell's equations:
 
 \begin{enumerate}
-   \item Gauss’ Law For Electrostatics
+   \item Gauss’s Law For Electrostatics
 
       Electric charge produces an electric field, and the flux of that field passing through any closed surface is proportional to the total charge contained within that surface.
 
@@ -63,25 +65,25 @@ Maxwell’s equations are a set of partial differential equations for the electr
 \subsection{Isotropic Antenna}
 Antenna is a specialized transducer that converts radio frequency into alternating current or vice versa, and as antenna patterns are the same while transmitting or receiving, thus receiving end works the same as the transmitting end.
 
-There are several different types of antennas and they all have their place. One of them is an isotropic antenna. The isotropic antenna is an ideal antenna that radiates its power uniformly in all directions over a sphere centered on the source, and we get the same intensity of radiation in all directions.
+There are several different types of antennas and they all have their place. One of them is an isotropic antenna. The isotropic antenna is an ideal antenna that radiates its power uniformly in all directions over a sphere centered on the source, and we get the same intensity of radiation in all directions \cite{balanis1992antenna}.
 
 \subsection{Beam Forming}
 
 When a signal is sent out it gets wider and wider there-by losing its strength. Therefore we need a technique to focus signals.
 
-Beam forming is a technique use to combine signals from an array of antennas to effectively synthesize a single aperture and beam, to simulate a large directional antenna. It is achieved by combining signals from antennas in an array with right delay and phase, in such a way that signals at particular angles experience constructive interference while others experience destructive interference, and we get a directive beam.
+Beam forming is a technique use to combine signals from an array of antennas to effectively synthesize a single aperture and beam, to simulate a large directional antenna \cite{van1988beamforming}. It is achieved by combining signals from antennas in an array with right delay and phase, in such a way that signals at particular angles experience constructive interference while others experience destructive interference, and we get a directive beam.
 
-Beam forming is considered as a subset of smart antennas or Advanced Antenna Systems (AAS), which typically exploit the properties of multiple antennas operating together. To get stronger beam forming effect we will add more antennas in the array.
+Beam forming is considered as a subset of smart antennas or Advanced Antenna Systems (AAS), which typically exploit the properties of multiple antennas operating together \cite{mouhamadou2006smart}. To get stronger beam forming effect we will add more antennas in the array.
 
 \subsection{Phased Array}
 
-A phased array is composed of lots of radiating elements with a correct phase relationship so that the multiple transmitted patterns combine in the transmitting media by natural coherence of these radiations, and form a “beam”, a signal targeted to the destination.
+A phased array is composed of lots of radiating elements with a correct phase relationship so that the multiple transmitted patterns combine in the transmitting media by natural coherence of these radiations, and form a “beam”, a signal targeted to the destination \cite{sylvania1966phased}.
 
-By this way, The phases overlap and amplify each other and in the desired direction (where the destined receiver is located) and where the beam is not supposed to go the phases collide and destroy each other.
+By this way, the phases overlap and amplify each other and in the desired direction (where the destined receiver is located) and where the beam is not supposed to go the phases collide and destroy each other.
 
 We can change the directionality of the beam by controlling the phase and relative amplitude of the signal at each transmitter. So by phased arrays we can steer the main beam of the antennas without physically moving the antenna.
 
-Depending upon their geometry we have different configuration of arrays:
+Depending upon their geometry we have different configuration of arrays \cite{mailloux2005phased}:
 
 \begin{enumerate}
 
@@ -100,7 +102,9 @@ Depending upon their geometry we have different configuration of arrays:
 
    \item Complex Arrays
 
-      Design by placing elements on certain specific position to get desirable beam. In general there are two types of phased arrays:
+      Design by placing elements on certain specific position to get desirable beam.
+      
+      In general there are two types of phased arrays \cite{sylvania1966phased}:
 
       \begin{enumerate}
 
