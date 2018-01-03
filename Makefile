@@ -9,7 +9,7 @@ CONTINUOUS=
 
 
 MAIN=thesis
-SOURCES=$(MAIN).tex Makefile chap1.tex chap2.tex chap3.tex chap4.tex code.tex
+SOURCES=$(MAIN).tex Makefile chap1.tex chap2.tex chap3.tex chap4.tex code.tex thesis.bib
 FIGURES=
 
 
