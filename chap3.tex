@@ -1,13 +1,13 @@
 \chapter{Simulating a Phase Array}
 
 
-My task was to construct the plot between intensity and lateral distance, for multiple antenna sources arranged in a linear array and by managing only the phase between them to produce a directed beam (one with maximum intensity at a location of my choice).
+My task was to construct the plot between intensity and lateral distance, for multiple antenna sources arranged in a linear array and by managing only the phase between them to produce a directed beam (one with maximum intensity at a location of My choice).
 
 \section{Calculating Intensity of a Single Antenna}
 
 Let us have a single source which is at distance $L$ from the point of observation $x = 0$. Now find the intensity at any point, at a lateral distance $x$ from the center of the screen. This point is at distance $r$ from the source.
 
-Intensity is defined as power transferred per unit area, where the area is measured on the plane perpendicular to the direction of propagation of the energy. This is same as the Poynting vector. So we use \eqref{eqn:poynting} for finding intensity.
+Intensity is defined as power transferred per unit area, where the area is measured on the plane perpendicular to the direction of propagation of the energy. This is same as the Poynting vector. So, we use \eqref{eqn:poynting} for finding intensity.
 %
 \begin{equation}
    I = \frac{1}{\mu_{o}}(\vec{E}\times\vec{B})
@@ -20,7 +20,7 @@ where $\displaystyle |\vec{B}| = \frac{|\vec{E}|}{c}$
         = c\epsilon_{o}E^2
 \end{equation}
 %
-so intensity is directly proportional to square of electric field, i.e
+By this intensity is directly proportional to square of electric field, i.e
 %
 \begin{equation}
    I \propto E^2
@@ -34,13 +34,13 @@ From \eqref{eqn:radial_E} the electric field of a (hypothetical) isotropic anten
 
 And for the point $x$ on the screen the distance $r$ from the source is given by $r(x) = \sqrt{L^2+x^2}$ and $\hat{r} = \cos\theta\hat{x}+\sin\theta\hat{y}$\\
 
-So the Electric field component along x-axis is
+So, the electric field component along x-axis is
 %
 \begin{equation}
 \vec{E}_x(x,t) = \frac{x}{r^2}\sin(kr-wt)
 \end{equation}
 %
-and the Electric field component along y-axis is
+and the electric field component along y-axis is
 %
 \begin{equation}
 \vec{E}_y(x,t) = \frac{L}{r^2}\sin(kr-wt)
@@ -56,3 +56,75 @@ These equations allow us to calculate the intensity profile for a single source/
 
 
 \section{Multiple Sources}
+
+Multiple antenna sources means we have an antenna array in which all the individual antennas are usually similar, which work together as a single antenna to transmit or receive signals.
+
+The radiation pattern of an antenna array in free space depends on four factors \cite{mailloux2005phased}:
+
+(1) The relative positions of the individual antennas with respect to each other.
+
+(2) The relative phases between them.
+
+(3) The relative magnitudes of the individual antenna.
+
+(4) The patterns of the individual antennas.
+
+	
+Now the multiple transmitted patterns radiated by each individual antenna with different phases combine and due to the phenomenon of interference the phases overlap and amplify each other in front of the array to create a beam with maximum intensity, traveling in a specific direction i.e a directed beam and where the beam is not supposed to go the phases collide and destroy each other. We can change the directionality of the beam by controlling the phase and relative amplitude of the signal at each transmitter.
+
+
+Similarly, for receiving, the separate signals coming from the individual antennas combine in the receiver with the correct phase relationship to enhance signals received from the desired directions and cancel signals from undesired directions.
+
+
+\subsection{Calculating Intensity for Multiple Sources}
+From multiple antenna sources, we get a beam with maximum intensity and by managing phase between them, we can steer this beam at a location of our choice.
+
+Here intensity plays a vital role as it defines the strength of the beam. For single antenna source intensity (3.7) is equal to the sum of the square of electric field component along x and y direction. where electric field components are the function of the distance between source and location, and time.
+
+Now for multiple sources, electric field components along x and y direction not only depend on distance between sources and desired location, and time rather they will depend on distance between antenna sources "d" and phase "p" too.
+
+So for all the sources;
+
+the electric field component along x-axis is
+\begin{equation}
+\vec{E}_x(x,d,p,t) = \frac{x-d}{r^2}\sin(kr-wt+p)
+\end{equation}
+and the electric field component along y-axis is
+\begin{equation}
+\vec{E}_y(x,d,p,t) = \frac{L}{r^2}\sin(kr-wt+p)
+\end{equation}
+where $r(x,d) = \sqrt{L^2+(x-d)^2}$ 
+
+From (3.7), final equation to calculate intensity profile for multiple sources/antennas is
+\begin{equation}
+I = E_x^2(x,d,p,t)+E_y^2(x,d,p,t)
+\end{equation}
+
+\section{Significance of Antenna Array}
+By using antenna array, we can achieve higher gain (directivity) i.e a narrower beam, than by a single antenna. In general, the larger the number of individual antenna elements used, the higher the gain and the narrower the beam.
+
+Following are the some benefits to use antenna array over a single antenna:
+
+(1) Suppress noise.
+
+(2) Improve signal quality.
+
+(3) Increase sensitivity and resolution.
+
+(4) Steer the main beam of the antenna without physically moving the antenna.
+
+(5) Save power.
+
+\section{Applications of Beam Forming}
+
+It has found numerous applications and some of them are:
+
+(1) RADAR to control air traffic by phased array radar and scan the radar beam quickly across the sky to detect planes and missiles.
+
+(2) SONAR for source localization.
+
+(3) Wireless communication for directional transmission and reception.
+
+(4) Medical imaging scanners use phased arrays of acoustic transducers to get better results.
+
+(4) Radio astronomy to produce high resolution imaging of the universe. 
