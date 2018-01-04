@@ -59,7 +59,6 @@ P=0
 #fs = 2 * pi * L / (k * d)
 #print("Slit-spacing = {} produces fringe spacing = {}".format(d, fs))
 
-ds = [-12, -4, 4, 12]
 # sources=[(distance,phase)]
 sources = [(-12, 0), (-4,0), (4,0), (12,0)]
 
@@ -118,8 +117,9 @@ plt.show()
 
 \subsection{Steer the beam by introducing and managing phase}
 
-Code-1
+\subsubsection{Example 1}\label{code:phase_right}
 
+\begin{Verbatim}[fontsize=\small,baselinestretch=0.9]
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sqrt, sin, pi
@@ -128,15 +128,6 @@ w=1.0
 k=1.0
 L=10.0 / k
 
-# Calculate fringe spacing:
-#d = 2 * 5           
-# Slit-spacing
-#fs = 2 * pi * L / (k * d)
-
-#print("Slit-spacing = {} produces fringe spacing = {}".format(d, fs))
-
-
-ds = [-12, -4, 4, 12]
 #sources=[(distance,phase)]
 sources = [(-12,0), (-4,0), (4,0), (12,pi)]
 
@@ -183,9 +174,12 @@ for x in np.linspace(-20,20,1000):
 
 plt.plot(xs,ys)
 plt.show()   
+\end{Verbatim}
 
-Code-2
 
+\subsubsection{Example 2}\label{code:phase_left}
+
+\begin{Verbatim}[fontsize=\small,baselinestretch=0.9]
 import numpy as np
 import matplotlib.pyplot as plt
 from math import sqrt, sin, pi
@@ -194,15 +188,6 @@ w=1.0
 k=1.0
 L=10.0 / k
 
-# Calculate fringe spacing:
-#d = 2 * 5           
-# Slit-spacing
-#fs = 2 * pi * L / (k * d)
-
-#print("Slit-spacing = {} produces fringe spacing = {}".format(d, fs))
-
-
-ds = [-12, -4, 4, 12]
 #sources=[(distance,phase)]
 sources = [(-12,0), (-4,pi), (4,pi), (12,pi)]
 
@@ -249,3 +234,4 @@ for x in np.linspace(-20,20,1000):
 
 plt.plot(xs,ys)
 plt.show()
+\end{Verbatim}
