@@ -11,12 +11,13 @@ Using python, I plotted distance vs. intensity for a single source. The relevant
 \end{figure}
 
 \subsection{Discussion}
-Here we have a single isotropic antenna source, radiating over a sphere centered on the source. It's intensity decreases by increasing the distance as it should be, because we have a spherical wave moving radially and with the passage of time when it cover some distance, it's intensity goes down and down. Where at the position where source is placed we have high intensity peak.
+
+Here we have a single isotropic antenna source, radiating over a sphere centered on the source. It's intensity decreases as the lateral distance increases as it should (according to the inverse square law), because we have a spherical wave moving radially. In the center of the screen we have maximum intensity because that is the closest point to the source. 
 
 
 \section{Intensity of Linear Array of 4 Antennae}
 
-Plot between distance and intensity, for four antenna sources arrange in a linear array and by introducing phase between them, we get interference pattern. The relevant code can be found in appendix \ref{code:four}.
+Plot between distance and intensity, for four antenna sources arrange in a linear array, all of them being in phase. It is immediately obvious that we have an interference pattern. The relevant code can be found in appendix \ref{code:four}.
 
 \begin{figure}[!h]
 	\centering	
@@ -25,26 +26,29 @@ Plot between distance and intensity, for four antenna sources arrange in a linea
 \end{figure}
 
 \subsection{Discussion}
-Now we have 4 antenna sources, arrange in a linear array. Here we get this radiation pattern by the contribution of all the antenna sources in the array. We get different lobes because of interference, spherical waves coming from each individual antenna source where arrive in phase, they add together (constructive interference) to enhance the intensity and where they arrive out of phase, with the peak of one coinciding with the another, the waves cancel (destructive interference) reducing the intensity in that direction.
+We have 4 antenna sources arranged in a linear array. We get this radiation pattern by the contribution of all the antenna sources in the array. We get different lobes because of interference. Wherever spherical waves coming from each individual antenna source arrive in phase they add together (constructive interference) to enhance the intensity and where they arrive out of phase, with the peak of one coinciding with the another, the waves cancel (destructive interference) reducing the intensity in that direction.
 
 \subsection{Managing Phase}
 
-Fig. (1.2) shows a plot between distance and intensity, for four antenna sources arrange in a linear array. Now, by introducing and managing phase among them we can steer the beam as:
+We used the same linear array of 4 antenna sources but modified the phase between them. Fig. (\ref{fig:phase_1}) (created using code \ref{code:phase_right}) corresponds to three antennas in phase and the right-most antenna completely out of phase ($\pi$ radians). Note how the intensity profile is no longer symmetric but in fact is shifting to the right. 
+
+Fig. (\ref{fig:phase_2}) (created using code \ref{code:phase_left}) corresponds to the left-most antenna being completely out of phase while the remaining three are exactly in phase. The peak intensity shifts to the left. It is clear that by changing the phase we are steering the direction of peak intensity, that is, steering the beam.
 
 \begin{figure}[!h]
 	\centering	
 	\includegraphics[scale=0.45]{figure_3.png}
-	\caption{Intensity profile of linear array of 4 antennae}
+    \caption{\label{fig:phase_1} Intensity profile of linear array of 4 antennae with 3 antennae in-phase and right-most antenna completely out of phase.}
 \end{figure}
 
 \begin{figure}[!h]
 	\centering	
 	\includegraphics[scale=0.45]{figure_4.png}
-	\caption{Intensity profile of linear array of 4 antennae}
+    \caption{\label{fig:phase_2} Intensity profile of linear array of 4 antennae with 3 antennae in-phase and left-most antenna completely out of phase.}
 \end{figure}
 
 \subsubsection{Discussion}
-These are the radiation patterns of antenna sources, by not only introducing fig. (4.2) but managing phase among them, consists of a strong steered beam in one direction which is emitted perpendicular to the plane of the antenna sources, plus a series of weaker beams, usually representing residual radiation in unwanted directions and can not participate in beam formation.
+
+These are the radiation patterns of interference between spherical waves produced with different phase between them. The result is a radiation pattern consisting of a strongly steered beam in one direction, plus a series of weaker beams, usually representing residual radiation in \textbf{unwanted} directions that can not participate in beam formation.
 
 \section{Conclusion}
 Fig. (4.3) and (4.4) shows that by introducing and managing phase among multiple antenna sources, we can steer the beam formed by the interference of all the radiations coming from each individual antenna source.
