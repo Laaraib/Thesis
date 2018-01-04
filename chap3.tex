@@ -48,7 +48,7 @@ and the electric field component along y-axis is
 
 Final equation for intensity becomes
 %
-\begin{equation}
+\begin{equation}\label{eqn:final_intensity}
    I = E_x^2(x,t)+E_y^2(x,t)
 \end{equation}
 
@@ -78,25 +78,37 @@ Similarly, for receiving, the separate signals coming from the individual antenn
 
 From multiple antenna sources, we get a beam with maximum intensity and by managing phase between them, we can steer this beam at a location of our choice.
 
-Here intensity plays a vital role as it defines the strength of the beam. For single antenna source intensity (3.7) is equal to the sum of the square of electric field component along x and y direction. where electric field components are the function of the distance between source and location, and time.
+Here intensity plays a vital role as it defines the strength of the beam. For single antenna source intensity \eqref{eqn:final_intensity} is equal to the sum of the square of electric field component along $x$ and $y$ direction, where electric field components are a function of the distance between source and location, and time.
 
-Now for multiple sources, electric field components along x and y direction not only depend on distance between sources and desired location, and time rather they will depend on distance between antenna sources "d" and phase "p" too.
+Now for multiple sources, electric field components along $x$ and $y$ direction not only depend on distance between sources and desired location, and time, but they will also depend on the antenna source separation $d$ (in the array) and phase $p$.
 
-So for all the sources;
-
-the electric field component along x-axis is
+So for each source in the array, the electric field component along $x$-axis is
+%
 \begin{equation}
-\vec{E}_x(x,d,p,t) = \frac{x-d}{r^2}\sin(kr-wt+p)
+{E}_x(x,d,p,t) = \frac{x-d}{r^2}\sin(kr-wt+p)
 \end{equation}
-and the electric field component along y-axis is
+%
+and the electric field component along $y$-axis is
+%
 \begin{equation}
-\vec{E}_y(x,d,p,t) = \frac{L}{r^2}\sin(kr-wt+p)
+{E}_y(x,d,p,t) = \frac{L}{r^2}\sin(kr-wt+p)
 \end{equation}
-where $r(x,d) = \sqrt{L^2+(x-d)^2}$ 
+%
+where $r(x,d) = \sqrt{L^2+(x-d)^2}$ .
 
-From (3.7), final equation to calculate intensity profile for multiple sources/antennas is
+By the principle of superposition the net electric field is calculated by adding the contribution from each source:
+%
 \begin{equation}
-I = E_x^2(x,d,p,t)+E_y^2(x,d,p,t)
+   \begin{aligned}
+      E_{x,net} &= \sum_{sources} E_x = \sum_{sources} \frac{x-d}{r^2}\sin(kr-wt+p)\\
+      E_{y,net} &= \sum_{sources} E_y = \sum_{sources} \frac{L}{r^2}\sin(kr-wt+p)
+   \end{aligned}
+\end{equation}
+
+From \eqref{eqn:final_intensity}, final equation to calculate intensity profile for multiple sources/antennas is
+%
+\begin{equation}
+   I = E^2_{x,net} + E^2_{y,net}
 \end{equation}
 
 \section{Significance of Antenna Array}
