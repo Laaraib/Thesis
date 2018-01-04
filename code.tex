@@ -9,23 +9,22 @@ w=1 #(t'=wt)
 k=1 #(r'=kr)
 L=1
 
-% r(x) is the distance between the source and the point x on the screen from the center x=0.
+# r(x) is the distance between the source and the point x on the screen from the center x=0.
 def r(x):
    return sqrt(L**2+x**2)
 
-% Ex(x,t) is the electric field component of the source along x-axis.
+# Ex(x,t) is the horizontal component of the electric field produced at point x 
 def Ex(x,t):
    return (x/r(x)**2)*(sin(k*r(x)-w*t))
 
-% Ey(x,t) is the electric field component of the source along y-axis.
+# Ey(x,t) is the vertical component of the electric field produced at point x 
 def Ey(x,t):
    return (L/r(x)**2)*(sin(k*r(x)-w*t))
 
-% I(x,t) is the intensity for a single source.
+# I(x,t) is the intensity of radiation at point x
 def I(x,t):
    return (Ex(x,t)**2+Ey(x,t)**2)
 
-#plot between intensity and distance.
 a=[]
 b=[]
 
@@ -54,27 +53,21 @@ k=1.0
 L=10.0 / k
 P=0
 
-# Calculate fringe spacing:
-#d = 2 * 5           # Slit-spacing
-#fs = 2 * pi * L / (k * d)
-#print("Slit-spacing = {} produces fringe spacing = {}".format(d, fs))
-
-# sources=[(distance,phase)]
 sources = [(-12, 0), (-4,0), (4,0), (12,0)]
 
-% r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
+# r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between the center of the array and the source
 def r(x,d):
    return sqrt(L**2+(x-d)**2)
 
-% Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
+# Ex(x,d,p,t) is the horizontal component of the electric field due to a source at distance d from the center of the array and with phase p
 def Ex(x,d,p,t):
    return ((x-d)/r(x,d)**2)*(sin(k*r(x,d)-w*t+p))
 
-% Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
+# Ey(x,d,p,t) is the vertical component of the electric field due to a source at distance d from the center of the array and with phase p
 def Ey(x,d,p,t):
    return (L/r(x,d)**2)*(sin(k*r(x,d)-w*t+p))
 
-% I(x,t) is the intensity for multiple sources.
+# I(x,t) is the intensity due to the effect of all sources combined
 def I(x,sources,t):
 
    Ox=0
@@ -87,7 +80,7 @@ def I(x,sources,t):
 
    return Ox**2+Oy**2
 
-% Intensity vs. lateral distance for a linear array of 4 antennae.
+# Intensity vs. lateral distance for a linear array of 4 antennae.
 def trapezoidal(f, a, b, n):
 
    h = float(b - a) / n
@@ -131,19 +124,19 @@ L=10.0 / k
 #sources=[(distance,phase)]
 sources = [(-12,0), (-4,0), (4,0), (12,pi)]
 
-% r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
+# r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
 def r(x,d):
     return sqrt(L**2+(x-d)**2)
     
-% Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
+# Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
 def Ex(x,d,P,t):
     return ((x-d)/r(x,d)**2)*(sin(k*r(x,d)-w*t+P))
 
-% Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
+# Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
 def Ey(x,d,P,t):
     return (L/r(x,d)**2)*(sin(k*r(x,d)-w*t+P))
        
-% I(x,t) is the intensity for multiple sources.
+# I(x,t) is the intensity for multiple sources.
 def I(x,sources,t):
     Ox=0
     Oy=0
@@ -153,7 +146,7 @@ def I(x,sources,t):
     
     return Ox**2+Oy**2
         
-% Intensity vs. lateral distance for a linear array of 4 antennae by managing phase.
+# Intensity vs. lateral distance for a linear array of 4 antennae by managing phase.
 def trapezoidal(f, a, b, n):
     h = float(b - a) / n
     s = 0.0
@@ -191,19 +184,19 @@ L=10.0 / k
 #sources=[(distance,phase)]
 sources = [(-12,0), (-4,pi), (4,pi), (12,pi)]
 
-% r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
+# r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
 def r(x,d):
     return sqrt(L**2+(x-d)**2)
     
-% Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
+# Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
 def Ex(x,d,P,t):
     return ((x-d)/r(x,d)**2)*(sin(k*r(x,d)-w*t+P))
    
-% Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
+# Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
 def Ey(x,d,P,t):
     return (L/r(x,d)**2)*(sin(k*r(x,d)-w*t+P))
  
-% I(x,t) is the intensity for multiple sources.
+# I(x,t) is the intensity for multiple sources.
 def I(x,sources,t):
     Ox=0
     Oy=0
@@ -213,7 +206,7 @@ def I(x,sources,t):
     
     return Ox**2+Oy**2
         
-% Intensity vs. lateral distance for a linear array of 4 antennae by managing phase.
+# Intensity vs. lateral distance for a linear array of 4 antennae by managing phase.
 def trapezoidal(f, a, b, n):
     h = float(b - a) / n
     s = 0.0
