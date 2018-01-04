@@ -13,19 +13,18 @@ L=1
 def r(x):
    return sqrt(L**2+x**2)
 
-# Ex(x,t) is the electric field component of the source along x-axis.
+# Ex(x,t) is the horizontal component of the electric field produced at point x 
 def Ex(x,t):
    return (x/r(x)**2)*(sin(k*r(x)-w*t))
 
-# Ey(x,t) is the electric field component of the source along y-axis.
+# Ey(x,t) is the vertical component of the electric field produced at point x 
 def Ey(x,t):
    return (L/r(x)**2)*(sin(k*r(x)-w*t))
 
-# I(x,t) is the intensity for a single source.
+# I(x,t) is the intensity of radiation at point x
 def I(x,t):
    return (Ex(x,t)**2+Ey(x,t)**2)
 
-#plot between intensity and distance.
 a=[]
 b=[]
 
@@ -54,27 +53,21 @@ k=1.0
 L=10.0 / k
 P=0
 
-# Calculate fringe spacing:
-#d = 2 * 5           # Slit-spacing
-#fs = 2 * pi * L / (k * d)
-#print("Slit-spacing = {} produces fringe spacing = {}".format(d, fs))
-
-# sources=[(distance,phase)]
 sources = [(-12, 0), (-4,0), (4,0), (12,0)]
 
-# r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between sources.
+# r(x,d) is the distance between the sources and the point x on the screen, and d is the distance between the center of the array and the source
 def r(x,d):
    return sqrt(L**2+(x-d)**2)
 
-# Ex(x,d,p,t) is the electric field component of the sources along x-axis. where, p is the phase.
+# Ex(x,d,p,t) is the horizontal component of the electric field due to a source at distance d from the center of the array and with phase p
 def Ex(x,d,p,t):
    return ((x-d)/r(x,d)**2)*(sin(k*r(x,d)-w*t+p))
 
-# Ey(x,d,p,t) is the electric field component of the sources along y-axis. where, p is the phase.
+# Ey(x,d,p,t) is the vertical component of the electric field due to a source at distance d from the center of the array and with phase p
 def Ey(x,d,p,t):
    return (L/r(x,d)**2)*(sin(k*r(x,d)-w*t+p))
 
-# I(x,t) is the intensity for multiple sources.
+# I(x,t) is the intensity due to the effect of all sources combined
 def I(x,sources,t):
 
    Ox=0
