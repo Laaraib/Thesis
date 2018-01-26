@@ -2,6 +2,8 @@
 
 \section{Intensity vs. lateral distance for a single source}\label{code:single}
 
+\subsection{For Intensity (Averaged over Time)}
+
 \begin{Verbatim}[fontsize=\small,baselinestretch=0.9]
 import matplotlib.pyplot as plt
 from math import sqrt, sin
@@ -38,6 +40,63 @@ for i in range(-150,150,1):
 fig= plt.figure()
 axes=fig.add_subplot(111)
 axes.plot(a,b)
+plt.xlabel('Distance ($m$)')
+plt.ylabel('Intensity ($Watt$ / $m^2$)')
+plt.show()
+\end{Verbatim}
+
+\subsection{For Intensity (Time Averaged)}
+
+\begin{Verbatim}[fontsize=\small,baselinestretch=0.9]
+import numpy as np
+import matplotlib.pyplot as plt
+from math import sqrt, sin, pi
+w=1 #(t'=wt)
+k=1 #(r'=kr)
+L=1
+
+# r(x) is the distance between the source and the point x on the screen from 
+# the center x=0.
+def r(x):
+    return sqrt(L**2+x**2)
+
+# Ex(x,t) is the horizontal component of the electric field produced at point x
+def Ex(x,t):
+    return (x/r(x)**2)*(sin(k*r(x)-w*t))
+
+# Ey(x,t) is the vertical component of the electric field produced at point x
+def Ey(x,t):
+    return (L/r(x)**2)*(sin(k*r(x)-w*t))
+
+# I(x,t) is the intensity of radiation at point x
+def I(x,t):
+    return (Ex(x,t)**2+Ey(x,t)**2)
+
+# For the value of time averaged intensity
+def trapezoidal(f, a, b, n):
+    h = float(b - a) / n
+    s = 0.0
+    s += f(a)/2.0
+    for i in range(1, n):
+        s += f(a + i*h)
+    s += f(b)/2.0
+    return s * h
+
+#print( trapezoidal(lambda t:I(0,t), -pi, pi, 1000))
+
+a=[]
+b=[]
+for x in np.linspace(-5,5,100):
+    y = trapezoidal(lambda t:I(x,t), -pi, pi, 1000)
+    a.append(x)
+    b.append(y)
+    #x= x+1
+
+fig= plt.figure()
+axes=fig.add_subplot(111)
+axes.plot(a,b)
+plt.xlabel('Distance ($m$)')
+plt.ylabel('Intensity ($Watt$ / $m^2$)')
 plt.show()
 \end{Verbatim}
 
@@ -109,6 +168,8 @@ xs.append(x)
 ys.append(y)
 
 plt.plot(xs,ys)
+plt.xlabel('Distance ($m$)')
+plt.ylabel('Intensity ($Watt$ / $m^2$)')
 plt.show()   
 \end{Verbatim}
 
@@ -174,6 +235,8 @@ for x in np.linspace(-20,20,1000):
     ys.append(y)
 
 plt.plot(xs,ys)
+plt.xlabel('Distance ($m$)')
+plt.ylabel('Intensity ($Watt$ / $m^2$)')
 plt.show()   
 \end{Verbatim}
 
@@ -238,5 +301,7 @@ for x in np.linspace(-20,20,1000):
     ys.append(y)
 
 plt.plot(xs,ys)
+plt.xlabel('Distance ($m$)')
+plt.ylabel('Intensity ($Watt$ / $m^2$)')
 plt.show()
 \end{Verbatim}
