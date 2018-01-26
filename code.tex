@@ -72,7 +72,7 @@ def Ey(x,t):
 def I(x,t):
     return (Ex(x,t)**2+Ey(x,t)**2)
 
-# For the value of time averaged intensity
+# For time averaged intensity
 def trapezoidal(f, a, b, n):
     h = float(b - a) / n
     s = 0.0
@@ -82,7 +82,7 @@ def trapezoidal(f, a, b, n):
     s += f(b)/2.0
     return s * h
 
-#print( trapezoidal(lambda t:I(0,t), -pi, pi, 1000))
+# Print( trapezoidal(lambda t:I(0,t), -pi, pi, 1000))
 
 a=[]
 b=[]
