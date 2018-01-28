@@ -50,4 +50,4 @@ debug:
 
 
 .PHONY: clean force once all show cover
-Source: https://drewsilcock.co.uk/using-make-and-latexmk
+# Source: https://drewsilcock.co.uk/using-make-and-latexmk
